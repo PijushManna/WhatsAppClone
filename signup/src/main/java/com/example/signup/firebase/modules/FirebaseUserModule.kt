@@ -6,14 +6,14 @@ import com.google.firebase.auth.FirebaseUser
 import dagger.Module
 import dagger.Provides
 
-@Module
-class FirebaseUserModule {
-    @Provides
-    fun getBaseFirebaseUser(user: FirebaseUser?,mAuth: FirebaseAuth) : FirebaseBaseUser = FirebaseBaseUser(user,mAuth)
-
-    @Provides
-    fun getFirebaseUser():FirebaseUser? = FirebaseAuth.getInstance().currentUser
-
-    @Provides
-    fun getFirebaseAuth():FirebaseAuth = FirebaseAuth.getInstance()
-}
+//@Module
+//class FirebaseUserModule {
+//    @Provides
+//    fun getBaseFirebaseUser(user: FirebaseUser?,mAuth: FirebaseAuth) : FirebaseBaseUser = FirebaseBaseUser(user,mAuth)
+//
+//    @Provides
+//    fun getFirebaseUser():FirebaseUser? = FirebaseAuth.getInstance().currentUser
+//
+//    @Provides
+//    fun getFirebaseAuth():FirebaseAuth = FirebaseAuth.getInstance()
+//}

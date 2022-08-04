@@ -4,9 +4,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import api.APIResponse
-import com.example.signup.base.services.BaseUserLoginService
+import com.example.signup.base.interfaces.BaseLogin
 
-class LoginViewModel(private val loginService: BaseUserLoginService) : ViewModel() {
+class LoginViewModel(private val loginService: BaseLogin) : ViewModel() {
     val email = MutableLiveData<String>()
     val password = MutableLiveData<String>()
     val response = MutableLiveData<APIResponse>()
@@ -17,7 +17,7 @@ class LoginViewModel(private val loginService: BaseUserLoginService) : ViewModel
         }
     }
 
-    class LoginViewModelFactory(private val loginService: BaseUserLoginService) : ViewModelProvider.Factory {
+    class LoginViewModelFactory(private val loginService: BaseLogin) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
             return LoginViewModel(loginService) as T
         }

@@ -1,6 +1,7 @@
 package com.blogspot.whatsappclone.ui.activity.base
 
 import android.util.Log
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import api.APIResponse
@@ -18,4 +19,14 @@ abstract class BaseActivity : AppCompatActivity(){
     }
 
     open fun onAPISuccess(){}
+
+    fun showConfirmExit(){
+        val builder = AlertDialog.Builder(this.applicationContext)
+        builder.setMessage("Are you sure you want to exit ?")
+        builder.setTitle("Exit")
+        builder.setCancelable(false)
+        builder.setPositiveButton("Ok") { _, _ -> finish() }
+        builder.setNegativeButton("Cancel"){dialog,_ -> dialog.dismiss()}
+        builder.show()
+    }
 }

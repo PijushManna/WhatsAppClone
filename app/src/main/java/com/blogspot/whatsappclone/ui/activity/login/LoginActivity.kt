@@ -1,25 +1,21 @@
 package com.blogspot.whatsappclone.ui.activity.login
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.Observer
-import com.blogspot.whatsappclone.components.DaggerUserLoginComponents
 import com.blogspot.whatsappclone.databinding.ActivityLoginBinding
 import com.blogspot.whatsappclone.ui.activity.base.BaseActivity
 import com.blogspot.whatsappclone.ui.activity.login.viewmodel.LoginViewModel
+import com.blogspot.whatsappclone.ui.activity.main.MainActivity
 import com.blogspot.whatsappclone.utils.InjectorUtils
-import com.example.signup.base.services.BaseUserLoginService
 import utils.toast
-import javax.inject.Inject
 
 class LoginActivity : BaseActivity() {
-    @Inject
-    lateinit var loginService: BaseUserLoginService
-    private val loginViewModel: LoginViewModel by lazy { InjectorUtils.getLoginViewModel(this,loginService)}
+    private val loginViewModel: LoginViewModel by lazy { InjectorUtils.getLoginViewModel(this)}
     private val binding:ActivityLoginBinding by lazy { ActivityLoginBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DaggerUserLoginComponents.builder().build().inject(this)
         setContentView(binding.root)
         binding.viewModel = loginViewModel
         addObservers()
@@ -46,6 +42,8 @@ class LoginActivity : BaseActivity() {
     }
 
     override fun onAPISuccess() {
-        toast("User logged in ")
+        toast("Logged in Successfully :)")
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 }

@@ -6,19 +6,18 @@ import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import com.blogspot.whatsappclone.utils.ProviderUtils
 
 const val CONNECTIVITY_CHANGE_ACTION = "android.net.conn.CONNECTIVITY_CHANGE"
 @Deprecated("Not used now")
 class ConnectivityReceiver : BroadcastReceiver() {
-    private val user = ProviderUtils.getCurrentUser()
+//    private val user = InjectorUtils.loginService
     override fun onReceive(context: Context?, intent: Intent) {
         val action = intent.action
         if (CONNECTIVITY_CHANGE_ACTION == action) {
             if(isUserConnected(context!!)){
-                user?.isConnected()
+//                user?.isConnected()
             }else{
-                user?.isDisconnected()
+//                user?.isDisconnected()
             }
         }
     }

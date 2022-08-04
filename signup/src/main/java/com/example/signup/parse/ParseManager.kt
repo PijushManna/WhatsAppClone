@@ -11,7 +11,7 @@ object ParseFactory {
     private const val SERVER_URL = "https://parseapi.back4app.com/"
 
     private var isParseInitialized = false
-    private val parseSignup: ParseSignup by lazy { ParseSignup() }
+//    private val parseSignup: ParseSignup by lazy { ParseSignup() }
     private val mParseLogin: ParseLogin by lazy { ParseLogin() }
 
     private fun initParse(context: Context){
@@ -25,12 +25,12 @@ object ParseFactory {
         isParseInitialized = true
     }
 
-    fun getParseSignUp(context: Context): ParseSignup {
-        if (!isParseInitialized){
-            initParse(context)
-        }
-        return parseSignup
-    }
+//    fun getParseSignUp(context: Context): ParseSignup {
+//        if (!isParseInitialized){
+//            initParse(context)
+//        }
+//        return parseSignup
+//    }
 
     fun getParseLogin(): ParseLogin {
         return mParseLogin

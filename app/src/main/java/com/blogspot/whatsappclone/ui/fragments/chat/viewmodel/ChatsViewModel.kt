@@ -9,10 +9,10 @@ import com.blogspot.whatsappclone.database.models.Chats
 
 class ChatsViewModel(private val repository: Repository) : ViewModel() {
     private val _allChats = MutableLiveData<List<Chats>>()
-    val allChats: LiveData<List<Chats>> = _allChats
+    val allChats: LiveData<List<Chats>> = repository.getChats()
 
     init {
-        _allChats.value = repository.getChats()
+
     }
 
 

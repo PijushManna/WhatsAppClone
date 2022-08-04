@@ -11,7 +11,6 @@ public interface BaseUser {
     val online: String?
     val status: String?
     val deviceToken: String?
-    fun logOut()
     fun isConnected()
     fun isDisconnected()
 }
