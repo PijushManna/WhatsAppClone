@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "521433166532",
+    "firebase_url": "https://free-money-traker-default-rtdb.firebaseio.com",
+    "project_id": "free-money-traker",
+    "storage_bucket": "free-money-traker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521433166532:android:2a90590cd4946fe3d60f91",
+        "android_client_info": {
+          "package_name": "com.example.signup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521433166532-kubj685crhi5k2uqf7saiq7ken8quhsv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHUJ8Ag7-0U-oqF9MUG-tsT55eKsPczlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521433166532-kubj685crhi5k2uqf7saiq7ken8quhsv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521433166532:android:358add3842fcbc3ed60f91",
+        "android_client_info": {
+          "package_name": "com.example.templates"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521433166532-kubj685crhi5k2uqf7saiq7ken8quhsv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHUJ8Ag7-0U-oqF9MUG-tsT55eKsPczlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521433166532-kubj685crhi5k2uqf7saiq7ken8quhsv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
