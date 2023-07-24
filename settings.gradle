@@ -18,3 +18,4 @@ rootProject.name = "WhatsAppClone"
 include ':app'
 include ':util'
 include ':signup'
+include ':lib'

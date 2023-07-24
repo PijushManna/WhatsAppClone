@@ -9,7 +9,6 @@
     app:statusBarBackground="?attr/colorPrimary">
 
     <com.google.android.material.appbar.AppBarLayout
-        style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:liftOnScroll="true">
@@ -17,7 +16,6 @@
         <!-- TopAppBar -->
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -28,7 +26,6 @@
         <!-- Tabs -->
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs_main"
-            style="@style/Widget.MaterialComponents.TabLayout.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimaryVariant"
@@ -56,13 +53,10 @@
 
         </com.google.android.material.tabs.TabLayout>
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/pgr_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <!-- View Pager-->
-
     </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pgr_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -8,11 +8,11 @@ import com.blogspot.whatsappclone.R
 import com.blogspot.whatsappclone.ui.activity.login.LoginActivity
 import com.blogspot.whatsappclone.ui.activity.main.MainActivity
 import com.blogspot.whatsappclone.utils.InjectorUtils
-import com.example.signup.base.interfaces.BaseLogin
+import com.example.signup.base.interfaces.LoginService
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
-    private val login:BaseLogin = InjectorUtils.loginService
+    private val login:LoginService = InjectorUtils.loginService
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
